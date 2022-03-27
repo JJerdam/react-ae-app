@@ -1,24 +1,16 @@
-import logo from './logo.svg';
+import {Helmet} from 'react-helmet';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <Helmet>
+          <script src="./my-form.js" type="text/javascript" />
+        </Helmet>
+        <h3>Angular Web Component in action</h3>
+        <lib-header></lib-header>
+        <my-custom-form></my-custom-form>
+      </div>
   );
 }
 
