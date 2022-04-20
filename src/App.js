@@ -5,10 +5,13 @@ import './App.css';
 
 
 function App() {
+  const customSubTitle="Custom Subtitle";
   const handleRef = (ref) => {
-    ref.addEventListener('formSubmitted', (ev) => {
-      console.log("Event:", ev)
-    })
+    if(ref) {
+      ref.addEventListener('formSubmitted', (ev) => {
+        console.log("Event:", ev)
+      })
+    }
   }
   return (
       <div className="App">
@@ -17,7 +20,7 @@ function App() {
         </Helmet>
         <h3>Angular Web Component in action</h3>
         {/* <lib-header></lib-header> */}
-        <my-custom-form ref={handleRef}></my-custom-form>
+        <my-custom-form customtext={customSubTitle} ref={handleRef}></my-custom-form>
       </div>
   );
 }
